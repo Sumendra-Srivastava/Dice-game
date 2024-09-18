@@ -1,0 +1,261 @@
+:root {
+  --box-shadow: 5px 5px 10px 10px rgba(101, 175, 10, 0.5);
+  --bg-color: rgb(40, 47, 97);
+}
+
+body {
+  background-color: rgb(11, 26, 50);
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Nav bar section */
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav_bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.nav_bar .nav_items {
+  padding: 16px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.nav_bar .nav_items:hover {
+  border-bottom: 3px solid yellow;
+}
+
+/* Home section */
+.home {
+  height: 88vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.home .left {
+  background-color: var(--bg-color);
+  width: 610px;
+  text-align: center;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid yellow;
+  box-shadow: var(--box-shadow);
+  margin-bottom: 20px;
+}
+
+.home .right .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home .right .img img {
+  height: 270px;
+  width: 270px;
+  border: 5px solid yellow;
+  border-radius: 100%;
+  animation-name: superman;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes superman {
+  0% {
+    border-color: blue;
+    transform: translate(0, 0px);
+    box-shadow: 10px 10px 100px 50px blue;
+  }
+  25% {
+    border-color: rgb(239, 244, 11);
+    box-shadow: 10px 10px 100px 50px rgb(239, 244, 11);
+  }
+  50% {
+    border-color: rgb(12, 12, 199);
+    transform: translate(0, 10px);
+    box-shadow: 10px 10px 100px 50px rgb(12, 12, 199);
+  }
+  75% {
+    border-color: rgb(130, 217, 160);
+    box-shadow: 10px 10px 100px 50px rgb(130, 217, 160);
+  }
+  100% {
+    border-color: rgb(50, 55, 205);
+    transform: translate(0, 0px);
+    box-shadow: 10px 10px 100px 50px rgb(50, 55, 205);
+  }
+}
+
+/* Skills section */
+.skills {
+  height: auto;
+  width: 100%;
+  padding: 20px;
+}
+
+.skills .items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.skills .items .item {
+  width: calc(23.33% - 60px);
+  background-color: black;
+  margin: 30px;
+  text-align: center;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid yellow;
+  box-shadow: var(--box-shadow);
+}
+
+.skills .items .item img {
+  width: 30px;
+}
+
+/* Contact section */
+.container-contact {
+  height: auto;
+  padding: 150px 20px;
+}
+
+.contact-icon {
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contact-icon .items {
+  background-color: black;
+  margin: 10px;
+  height: 70px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  border: 2px solid yellow;
+}
+
+.contact-icon .items:hover {
+  background-color: var(--bg-color);
+  box-shadow: var(--box-shadow);
+  transform: scale(1.1);
+}
+
+.contact-icon .items .icon {
+  font-size: 2rem;
+}
+
+/* Project section */
+.container .project {
+  padding: 90px;
+
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .home {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home .left,
+  .home .right .img {
+    width: 100%;
+  }
+
+  .skills .items .item {
+    width: calc(46% - 60px);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav_bar {
+    flex-direction: column;
+  }
+
+  .nav_bar .nav_items {
+    padding: 10px;
+  }
+
+  .home {
+    padding: 10px;
+  }
+
+  .skills .items .item {
+    width: calc(96% - 60px);
+    margin: 15px auto;
+  }
+
+  .contact-icon .items {
+    margin: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home .left {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .home .right .img img {
+    height: 200px;
+    width: 200px;
+  }
+
+  .skills .items .item {
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  .contact-icon .items {
+    height: 50px;
+    width: 50px;
+  }
+
+  .contact-icon .items .icon {
+    font-size: 1.5rem;
+  }
+}
+/* Project section */
+
+
+.container .project {
+ 
+  
+   
+   
+  text-align: center; /* Center text inside the project section */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container .project {
+    width: 90%; /* Reduce width for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .container .project {
+    width: 95%; /* Further reduce width for very small screens */
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+}
+
